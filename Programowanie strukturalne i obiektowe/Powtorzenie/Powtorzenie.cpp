@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Powtorzenie.h"
-
 void showMenu()
 {
 	system("cls");
@@ -18,50 +17,68 @@ void chooseOptionFromUser()
 
 void doSelectedTask()
 {
-	if (selectedOption == 1)
-	{
-		PoleKwadratu();
-	}
-	if (selectedOption == 2)
-	{
-		PoleTrojkata();
-	}
+
 }
 
 void zadanie5()
 {
-	std::cout << "Podaj liczbe do zamiany na system binarny:\n";
+	std::cout << "Podaj liczbe dziesietna do zamiany na system binarny:\n";
 	int usernumber;
 	std::cin >> usernumber;
-	
 	std::string finalnumber;
-	while (usernumber)
-		wynik = (usernumber % 2) + finalnumber;
-	usernumber /:2
-}
-		
+	do{
+		finalnumber = usernumber % 2;
+		usernumber /= 2;
+	} while (usernumber != 0);
+
 	std::cout << "Podana wczeœniej przez ciebie liczba to:\n";
 	std::cout << usernumber;
 	std::cout << "Finalny efekt zamiany liczby dziesietnej na liczbe binarna wynosi:\n";
 	std::cout << finalnumber;
 	
+	
 }
-
-
-
+void zadanie6()
 {
-	//1. wyœwietlenie menu
-	showMenu();
+ //
+	//
+	using namespace std;
+	int number;
+	int sys;
+	string znak[16]{ "0","1","2","3","4","5","6","7","8","9","A","B""C","D","E","F", };
+	cout << "Podaj liczbe:\n";
+	cin >> number;
 
-	//2. wybranie opcji przez u¿ytkownika
-	chooseOptionFromUser();
-
-	//3. Wykonanie wybranego zadania
-	doSelectedTask();
+	do
+	{
+		cout << "Podaj System zamiany";
+		cin >> sys;
+	} while (sys > 16 || sys < 2);
+	cout << "Wynik:";
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
 
 void main()
 {
-	mainProgram();
+	zadanie5();
 }
 
