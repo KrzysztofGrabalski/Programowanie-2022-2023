@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Przykładowy program</title>
+    </head>
+    <body>
+        <p>Podaj imię:</p>
+        <input type="text" id="nameId"/>
+        <p>Podaj wiek</p>
+        <input type="text" id="ageId"/>
+        <br/>
+        <input type="button" value="Wyświetl informację" onclick="getInfo()"/>
+        <br/>
+        <div id="helloId">
+
+            
+        </div>
+        <div id="legalAgeId">
+
+
+        </div>
+
+        
+        <br/>
+        <script>
+
+            function getInfo()
+            {   
+                document.getElementById("helloId").innerText=""
+                document.getElementById("legalAgeId").innerText=""               
+                age = document.getElementById("ageId").value
+                name = document.getElementById("nameId").value
+
+                if(name=="")
+                {
+                    document.getElementById("helloId").innerText = "Nie podales imienia"
+                    return
+                }
+                
+                if(age=="")
+                {
+                    document.getElementById("helloId").innerText = "Nie podałeś wieku"
+                    return
+                }
+            
+            
+                if (isNaN(parseInt(age)))
+                {
+                    document.getElementById("helloId").innerText = "Wiek nie jest liczba"
+                    return
+                }
+
+                
+
+                if (age < 1)
+                {
+                    document.getElementById("helloId").innerText = "Podaj poprawny wiek"
+                    return
+                }
+
+                if(age>130)
+                {
+                    document.getElementById("helloId").innerText = "Podaj poprawny wiek"
+                    return
+                }
+                
+                if (age >= 18 )
+                    {
+                    document.getElementById("legalAgeId").innerText = "Jesteś Pełnoletni"}
+                else
+                {
+                    document.getElementById("legalAgeId").innerText = "Jesteś niepełnoletni"}
+                
+                if (name == "")
+                [
+                        document.getElementById("helloId").innerText = "Podaj poprawnie imie"
+                ]
+                else
+                {
+                        document.getElementById("helloId").innerText = "Witaj" + " " + name + " " + "na stronie"
+                        
+                }
+               
+                
+
+                
+              
+
+            
+                
+
+
+
+
+            }
+        </script>
+    </body>
+</html>

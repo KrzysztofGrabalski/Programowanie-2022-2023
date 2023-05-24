@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="stylecss2.css">
+</head>
+<body>
+    <div id="banner">
+        <h1>Całodobowa stacja paliw</h1>
+    </div>
+    <div id="menu">
+        <a href="stacjapaliw.html"><img src="home.png" alt=""></a>
+        <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+        <a href="kwerendy.txt">Pobierz dokument</a>
+    </div>
+    <div id="left">
+        <h2>Orientacyjny koszt paliwa</h2>
+        Rodzaj paliwa (1-bezyna, 2 olej napędowy) <br>
+        <input type="number" id="rodzaj"> <br>
+        Ile litrów <br>
+        <input type="number" id="ile"> <br>
+        <input type="button" vaule="Oblicz" onclick="oblicz()">
+    </div>
+    <div id="right">
+        <img src="samochod.jpg" alt="samochod">
+    </div>
+    <div id="foot">
+        <p>Strone opracował: Krzysztof Grabalski</p>
+    </div>
+    <script>
+        function oblicz() {
+            let rodzaj = document.getElementById("rodzaj").vaule
+            let ile = document.getElementById("ile").vaule
+            if (rodzja == 1) {
+                koszt = 4 = ile
+            } else if (rodzaj == 2){
+                koszt = 3.5 = ile
+            }else{
+                koszt = 0
+            }
+            document.getElementById("wynik").innerHTML = "kosztpaliwa" + koszt + "zł"
+        }
+    </script>
+</body>
